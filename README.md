@@ -15,8 +15,8 @@ The wievs are as follows:
     <td><b>Lotto</b></td>
   </tr>
   <tr>
-    <td><img src="images/Eurojackpot_View.jpg"/></td>
-    <td><img src="images/Lotto_View.jpg"/></td>
+    <td><img src="Images/Eurojackpot_View.jpg"/></td>
+    <td><img src="Images/Lotto_View.jpg"/></td>
   </tr>
 </table>
 <p/>
