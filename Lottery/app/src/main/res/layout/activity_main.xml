@@ -1,0 +1,2899 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/prompt_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/choice_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/lotteryRadioGroup"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:background="#FFFFFF"
+        android:checkedButton="@+id/sound"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prompt_text">
+
+        <RadioButton
+            android:id="@+id/ejpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:checked="true"
+            android:text="@string/eurojackpot" />
+
+        <RadioButton
+            android:id="@+id/lottoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="@string/lotto" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/drawButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lotteryRadioGroup"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:text="@string/draw_text"
+        app:layout_constraintBottom_toBottomOf="@+id/lotteryRadioGroup"
+        app:layout_constraintStart_toEndOf="@+id/lotteryRadioGroup"
+        app:layout_constraintTop_toTopOf="@+id/lotteryRadioGroup" />
+
+    <!-- First row of Eurojackpot balls -->
+
+    <TextView
+        android:id="@+id/ejpView00"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="69"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lotteryRadioGroup" />
+
+    <TextView
+        android:id="@+id/ejpView01"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="8"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView00"
+        app:layout_constraintTop_toBottomOf="@+id/lotteryRadioGroup" />
+
+    <TextView
+        android:id="@+id/ejpView02"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="10"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView01"
+        app:layout_constraintTop_toBottomOf="@+id/lotteryRadioGroup" />
+
+    <TextView
+        android:id="@+id/ejpView03"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="21"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView02"
+        app:layout_constraintTop_toBottomOf="@+id/lotteryRadioGroup" />
+
+    <TextView
+        android:id="@+id/ejpView04"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="32"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView03"
+        app:layout_constraintTop_toBottomOf="@+id/lotteryRadioGroup" />
+
+    <TextView
+        android:id="@+id/ejpViewStar0"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejpdelim"
+        android:text="@string/star"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView04"
+        app:layout_constraintTop_toBottomOf="@+id/lotteryRadioGroup" />
+
+    <TextView
+        android:id="@+id/ejpView05"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_star"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="3"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpViewStar0"
+        app:layout_constraintTop_toBottomOf="@+id/lotteryRadioGroup" />
+
+    <TextView
+        android:id="@+id/ejpView06"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_star"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="7"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView05"
+        app:layout_constraintTop_toBottomOf="@+id/lotteryRadioGroup" />
+
+    <!-- Second row of Eurojackpot balls -->
+
+    <TextView
+        android:id="@+id/ejpView10"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="69"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView00" />
+
+    <TextView
+        android:id="@+id/ejpView11"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="8"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView10"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView01" />
+
+    <TextView
+        android:id="@+id/ejpView12"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="10"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView11"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView02" />
+
+    <TextView
+        android:id="@+id/ejpView13"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="21"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView12"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView03" />
+
+    <TextView
+        android:id="@+id/ejpView14"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="32"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView13"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView04" />
+
+    <TextView
+        android:id="@+id/ejpViewStar1"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejpdelim"
+        android:text="@string/star"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView14"
+        app:layout_constraintTop_toBottomOf="@+id/ejpViewStar0" />
+
+    <TextView
+        android:id="@+id/ejpView15"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_star"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="3"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpViewStar1"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView05" />
+
+    <TextView
+        android:id="@+id/ejpView16"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_star"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="7"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView15"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView06" />
+
+    <!-- Third row of Eurojackpot balls -->
+
+    <TextView
+        android:id="@+id/ejpView20"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="69"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView10" />
+
+    <TextView
+        android:id="@+id/ejpView21"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="8"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView20"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView11" />
+
+    <TextView
+        android:id="@+id/ejpView22"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="10"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView21"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView12" />
+
+    <TextView
+        android:id="@+id/ejpView23"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="21"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView22"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView13" />
+
+    <TextView
+        android:id="@+id/ejpView24"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="32"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView23"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView14" />
+
+    <TextView
+        android:id="@+id/ejpViewStar2"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejpdelim"
+        android:text="@string/star"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView24"
+        app:layout_constraintTop_toBottomOf="@+id/ejpViewStar1" />
+
+    <TextView
+        android:id="@+id/ejpView25"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_star"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="3"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpViewStar2"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView15" />
+
+    <TextView
+        android:id="@+id/ejpView26"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_star"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="7"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView25"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView16" />
+
+    <!-- Fourth row of Eurojackpot balls -->
+
+    <TextView
+        android:id="@+id/ejpView30"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="69"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView20" />
+
+    <TextView
+        android:id="@+id/ejpView31"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="8"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView30"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView21" />
+
+    <TextView
+        android:id="@+id/ejpView32"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="10"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView31"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView22" />
+
+    <TextView
+        android:id="@+id/ejpView33"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="21"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView32"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView23" />
+
+    <TextView
+        android:id="@+id/ejpView34"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="32"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView33"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView24" />
+
+    <TextView
+        android:id="@+id/ejpViewStar3"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejpdelim"
+        android:text="@string/star"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView34"
+        app:layout_constraintTop_toBottomOf="@+id/ejpViewStar2" />
+
+    <TextView
+        android:id="@+id/ejpView35"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_star"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="3"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpViewStar3"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView25" />
+
+    <TextView
+        android:id="@+id/ejpView36"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_star"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="7"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView35"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView26" />
+
+    <!-- Fifth row of Eurojackpot balls -->
+
+    <TextView
+        android:id="@+id/ejpView40"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="69"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView30" />
+
+    <TextView
+        android:id="@+id/ejpView41"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="8"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView40"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView31" />
+
+    <TextView
+        android:id="@+id/ejpView42"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="10"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView41"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView32" />
+
+    <TextView
+        android:id="@+id/ejpView43"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="21"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView42"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView33" />
+
+    <TextView
+        android:id="@+id/ejpView44"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="32"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView43"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView34" />
+
+    <TextView
+        android:id="@+id/ejpViewStar4"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejpdelim"
+        android:text="@string/star"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView44"
+        app:layout_constraintTop_toBottomOf="@+id/ejpViewStar3" />
+
+    <TextView
+        android:id="@+id/ejpView45"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_star"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="3"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpViewStar4"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView35" />
+
+    <TextView
+        android:id="@+id/ejpView46"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_star"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="7"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView45"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView36" />
+
+    <!-- Sixth row of Eurojackpot balls -->
+
+    <TextView
+        android:id="@+id/ejpView50"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="69"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView40" />
+
+    <TextView
+        android:id="@+id/ejpView51"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="8"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView50"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView41" />
+
+    <TextView
+        android:id="@+id/ejpView52"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="10"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView51"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView42" />
+
+    <TextView
+        android:id="@+id/ejpView53"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="21"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView52"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView43" />
+
+    <TextView
+        android:id="@+id/ejpView54"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="32"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView53"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView44" />
+
+    <TextView
+        android:id="@+id/ejpViewStar5"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejpdelim"
+        android:text="@string/star"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView54"
+        app:layout_constraintTop_toBottomOf="@+id/ejpViewStar4" />
+
+    <TextView
+        android:id="@+id/ejpView55"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_star"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="3"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpViewStar5"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView45" />
+
+    <TextView
+        android:id="@+id/ejpView56"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_star"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="7"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView55"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView46" />
+
+    <!-- Seventh row of Eurojackpot balls -->
+
+    <TextView
+        android:id="@+id/ejpView60"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="69"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView50" />
+
+    <TextView
+        android:id="@+id/ejpView61"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="8"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView60"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView51" />
+
+    <TextView
+        android:id="@+id/ejpView62"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="10"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView61"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView52" />
+
+    <TextView
+        android:id="@+id/ejpView63"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="21"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView62"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView53" />
+
+    <TextView
+        android:id="@+id/ejpView64"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="32"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView63"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView54" />
+
+    <TextView
+        android:id="@+id/ejpViewStar6"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejpdelim"
+        android:text="@string/star"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView64"
+        app:layout_constraintTop_toBottomOf="@+id/ejpViewStar5" />
+
+    <TextView
+        android:id="@+id/ejpView65"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_star"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="3"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpViewStar6"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView55" />
+
+    <TextView
+        android:id="@+id/ejpView66"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_star"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="7"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView65"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView56" />
+
+    <!-- Eighth row of Eurojackpot balls -->
+
+    <TextView
+        android:id="@+id/ejpView70"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="69"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView60" />
+
+    <TextView
+        android:id="@+id/ejpView71"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="8"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView70"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView61" />
+
+    <TextView
+        android:id="@+id/ejpView72"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="10"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView71"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView62" />
+
+    <TextView
+        android:id="@+id/ejpView73"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="21"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView72"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView63" />
+
+    <TextView
+        android:id="@+id/ejpView74"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="32"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView73"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView64" />
+
+    <TextView
+        android:id="@+id/ejpViewStar7"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejpdelim"
+        android:text="@string/star"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView74"
+        app:layout_constraintTop_toBottomOf="@+id/ejpViewStar6" />
+
+    <TextView
+        android:id="@+id/ejpView75"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_star"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="3"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpViewStar7"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView65" />
+
+    <TextView
+        android:id="@+id/ejpView76"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_star"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="7"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView75"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView66" />
+
+    <!-- Ninth row of Eurojackpot balls -->
+
+    <TextView
+        android:id="@+id/ejpView80"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="69"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView70" />
+
+    <TextView
+        android:id="@+id/ejpView81"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="8"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView80"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView71" />
+
+    <TextView
+        android:id="@+id/ejpView82"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="10"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView81"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView72" />
+
+    <TextView
+        android:id="@+id/ejpView83"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="21"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView82"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView73" />
+
+    <TextView
+        android:id="@+id/ejpView84"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="32"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView83"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView74" />
+
+    <TextView
+        android:id="@+id/ejpViewStar8"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejpdelim"
+        android:text="@string/star"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView84"
+        app:layout_constraintTop_toBottomOf="@+id/ejpViewStar7" />
+
+    <TextView
+        android:id="@+id/ejpView85"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_star"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="3"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpViewStar8"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView75" />
+
+    <TextView
+        android:id="@+id/ejpView86"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_star"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="7"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView85"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView76" />
+
+    <!-- Tenth row of Eurojackpot balls -->
+
+    <TextView
+        android:id="@+id/ejpView90"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="69"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView80" />
+
+    <TextView
+        android:id="@+id/ejpView91"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="8"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView90"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView81" />
+
+    <TextView
+        android:id="@+id/ejpView92"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="10"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView91"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView82" />
+
+    <TextView
+        android:id="@+id/ejpView93"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="21"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView92"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView83" />
+
+    <TextView
+        android:id="@+id/ejpView94"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_five"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="32"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView93"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView84" />
+
+    <TextView
+        android:id="@+id/ejpViewStar9"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejpdelim"
+        android:text="@string/star"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView94"
+        app:layout_constraintTop_toBottomOf="@+id/ejpViewStar8" />
+
+    <TextView
+        android:id="@+id/ejpView95"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_star"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="3"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpViewStar9"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView85" />
+
+    <TextView
+        android:id="@+id/ejpView96"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_ejp_star"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ejp"
+        android:text="7"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/ejpView95"
+        app:layout_constraintTop_toBottomOf="@+id/ejpView86" />
+
+    <!-- First row of Lotto balls -->
+
+    <TextView
+        android:id="@+id/lView00"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="69"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lotteryRadioGroup" />
+
+    <TextView
+        android:id="@+id/lView01"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="8"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView00"
+        app:layout_constraintTop_toBottomOf="@+id/lotteryRadioGroup" />
+
+    <TextView
+        android:id="@+id/lView02"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="10"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView01"
+        app:layout_constraintTop_toBottomOf="@+id/lotteryRadioGroup" />
+
+    <TextView
+        android:id="@+id/lView03"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="21"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView02"
+        app:layout_constraintTop_toBottomOf="@+id/lotteryRadioGroup" />
+
+    <TextView
+        android:id="@+id/lView04"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="32"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView03"
+        app:layout_constraintTop_toBottomOf="@+id/lotteryRadioGroup" />
+
+    <TextView
+        android:id="@+id/lView05"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="7"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView04"
+        app:layout_constraintTop_toBottomOf="@+id/lotteryRadioGroup" />
+
+    <TextView
+        android:id="@+id/lView06"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="3"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView05"
+        app:layout_constraintTop_toBottomOf="@+id/lotteryRadioGroup" />
+
+    <TextView
+        android:id="@+id/lViewPlus0"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="18dp"
+
+        android:background="@drawable/bg_l_plus"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ldelim"
+        android:text="@string/plus"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView06"
+        app:layout_constraintTop_toBottomOf="@+id/lotteryRadioGroup" />
+
+    <TextView
+        android:id="@+id/lView07"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_plus"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="7"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lViewPlus0"
+        app:layout_constraintTop_toBottomOf="@+id/lotteryRadioGroup" />
+
+    <!-- Second row of Lotto balls -->
+
+    <TextView
+        android:id="@+id/lView10"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="69"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lView00" />
+
+    <TextView
+        android:id="@+id/lView11"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="8"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView10"
+        app:layout_constraintTop_toBottomOf="@+id/lView01" />
+
+    <TextView
+        android:id="@+id/lView12"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="10"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView11"
+        app:layout_constraintTop_toBottomOf="@+id/lView02" />
+
+    <TextView
+        android:id="@+id/lView13"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="21"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView12"
+        app:layout_constraintTop_toBottomOf="@+id/lView03" />
+
+    <TextView
+        android:id="@+id/lView14"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="32"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView13"
+        app:layout_constraintTop_toBottomOf="@+id/lView04" />
+
+    <TextView
+        android:id="@+id/lView15"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="3"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView14"
+        app:layout_constraintTop_toBottomOf="@+id/lView05" />
+
+    <TextView
+        android:id="@+id/lView16"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="7"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView15"
+        app:layout_constraintTop_toBottomOf="@+id/lView06" />
+
+    <TextView
+        android:id="@+id/lViewPlus1"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="28dp"
+
+        android:background="@drawable/bg_l_plus"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ldelim"
+        android:text="@string/plus"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView16"
+        app:layout_constraintTop_toBottomOf="@+id/lViewPlus0" />
+
+    <TextView
+        android:id="@+id/lView17"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_plus"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="7"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lViewPlus1"
+        app:layout_constraintTop_toBottomOf="@+id/lView07" />
+
+    <!-- Third row of Lotto balls -->
+
+    <TextView
+        android:id="@+id/lView20"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="69"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lView10" />
+
+    <TextView
+        android:id="@+id/lView21"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="8"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView20"
+        app:layout_constraintTop_toBottomOf="@+id/lView11" />
+
+    <TextView
+        android:id="@+id/lView22"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="10"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView21"
+        app:layout_constraintTop_toBottomOf="@+id/lView12" />
+
+    <TextView
+        android:id="@+id/lView23"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="21"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView22"
+        app:layout_constraintTop_toBottomOf="@+id/lView13" />
+
+    <TextView
+        android:id="@+id/lView24"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="32"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView23"
+        app:layout_constraintTop_toBottomOf="@+id/lView14" />
+
+    <TextView
+        android:id="@+id/lView25"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="3"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView24"
+        app:layout_constraintTop_toBottomOf="@+id/lView15" />
+
+    <TextView
+        android:id="@+id/lView26"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="7"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView25"
+        app:layout_constraintTop_toBottomOf="@+id/lView16" />
+
+    <TextView
+        android:id="@+id/lViewPlus2"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="28dp"
+
+        android:background="@drawable/bg_l_plus"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ldelim"
+        android:text="@string/plus"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView26"
+        app:layout_constraintTop_toBottomOf="@+id/lViewPlus1" />
+
+    <TextView
+        android:id="@+id/lView27"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_plus"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="7"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lViewPlus2"
+        app:layout_constraintTop_toBottomOf="@+id/lView17" />
+
+    <!-- Fourth row of Lotto balls -->
+
+    <TextView
+        android:id="@+id/lView30"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="69"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lView20" />
+
+    <TextView
+        android:id="@+id/lView31"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="8"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView30"
+        app:layout_constraintTop_toBottomOf="@+id/lView21" />
+
+    <TextView
+        android:id="@+id/lView32"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="10"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView31"
+        app:layout_constraintTop_toBottomOf="@+id/lView22" />
+
+    <TextView
+        android:id="@+id/lView33"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="21"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView32"
+        app:layout_constraintTop_toBottomOf="@+id/lView23" />
+
+    <TextView
+        android:id="@+id/lView34"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="32"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView33"
+        app:layout_constraintTop_toBottomOf="@+id/lView24" />
+
+    <TextView
+        android:id="@+id/lView35"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="3"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView34"
+        app:layout_constraintTop_toBottomOf="@+id/lView25" />
+
+    <TextView
+        android:id="@+id/lView36"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="7"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView35"
+        app:layout_constraintTop_toBottomOf="@+id/lView26" />
+
+    <TextView
+        android:id="@+id/lViewPlus3"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="28dp"
+
+        android:background="@drawable/bg_l_plus"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ldelim"
+        android:text="@string/plus"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView36"
+        app:layout_constraintTop_toBottomOf="@+id/lViewPlus2" />
+
+    <TextView
+        android:id="@+id/lView37"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_plus"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="7"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lViewPlus3"
+        app:layout_constraintTop_toBottomOf="@+id/lView27" />
+
+    <!-- Fifth row of Lotto balls -->
+
+    <TextView
+        android:id="@+id/lView40"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="69"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lView30" />
+
+    <TextView
+        android:id="@+id/lView41"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="8"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView40"
+        app:layout_constraintTop_toBottomOf="@+id/lView31" />
+
+    <TextView
+        android:id="@+id/lView42"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="10"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView41"
+        app:layout_constraintTop_toBottomOf="@+id/lView32" />
+
+    <TextView
+        android:id="@+id/lView43"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="21"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView42"
+        app:layout_constraintTop_toBottomOf="@+id/lView33" />
+
+    <TextView
+        android:id="@+id/lView44"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="32"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView43"
+        app:layout_constraintTop_toBottomOf="@+id/lView34" />
+
+    <TextView
+        android:id="@+id/lView45"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="3"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView44"
+        app:layout_constraintTop_toBottomOf="@+id/lView35" />
+
+    <TextView
+        android:id="@+id/lView46"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="7"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView45"
+        app:layout_constraintTop_toBottomOf="@+id/lView36" />
+
+    <TextView
+        android:id="@+id/lViewPlus4"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="28dp"
+
+        android:background="@drawable/bg_l_plus"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ldelim"
+        android:text="@string/plus"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView46"
+        app:layout_constraintTop_toBottomOf="@+id/lViewPlus3" />
+
+    <TextView
+        android:id="@+id/lView47"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_plus"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="7"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lViewPlus4"
+        app:layout_constraintTop_toBottomOf="@+id/lView37" />
+
+    <!-- Sixth row of Lotto balls -->
+
+    <TextView
+        android:id="@+id/lView50"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="69"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lView40" />
+
+    <TextView
+        android:id="@+id/lView51"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="8"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView50"
+        app:layout_constraintTop_toBottomOf="@+id/lView41" />
+
+    <TextView
+        android:id="@+id/lView52"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="10"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView51"
+        app:layout_constraintTop_toBottomOf="@+id/lView42" />
+
+    <TextView
+        android:id="@+id/lView53"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="21"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView52"
+        app:layout_constraintTop_toBottomOf="@+id/lView43" />
+
+    <TextView
+        android:id="@+id/lView54"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="32"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView53"
+        app:layout_constraintTop_toBottomOf="@+id/lView44" />
+
+    <TextView
+        android:id="@+id/lView55"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="3"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView54"
+        app:layout_constraintTop_toBottomOf="@+id/lView45" />
+
+    <TextView
+        android:id="@+id/lView56"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_seven"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="7"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView55"
+        app:layout_constraintTop_toBottomOf="@+id/lView46" />
+
+    <TextView
+        android:id="@+id/lViewPlus5"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="28dp"
+
+        android:background="@drawable/bg_l_plus"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/ldelim"
+        android:text="@string/plus"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lView56"
+        app:layout_constraintTop_toBottomOf="@+id/lViewPlus4" />
+
+    <TextView
+        android:id="@+id/lView57"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/bg_l_plus"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:tag="@string/l"
+        android:text="7"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/lViewPlus5"
+        app:layout_constraintTop_toBottomOf="@+id/lView47" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

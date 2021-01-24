@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lottery</string>
+    <string name="choice_text">Choose one of the games below</string>
+    <string name="eurojackpot">Eurojackpot</string>
+    <string name="lotto">Lotto</string>
+    <string name="draw_text">Draw</string>
+    <string name="ejp">EJP</string>
+    <string name="l">L</string>
+    <string name="ejpdelim">STAR</string>
+    <string name="ldelim">PLUS</string>
+    <string name="star">\u2605</string>
+    <string name="plus">P</string>
+</resources>
