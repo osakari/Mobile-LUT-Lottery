@@ -4,7 +4,7 @@
 <p/>
 Likewise, after selection of the <i>Lotto</i> radio button, pushing <i>Draw</i> produces six rows of <i>Lotto</i> balls, with <i>Plus</i> balls included.
 <p/>
-Currently there is no release version of the app. You only can get the whole package and run it with Android Studio.
+Currently there is no release version of the app. You only can get the whole package and run it with Android Studio, opening the Lottery project within the Lottery folder.
 <p/>
 The wievs are as follows:
 <p/>
